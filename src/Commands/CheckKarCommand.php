@@ -1,12 +1,12 @@
 <?php
 
-namespace VendorName\Skeleton\Commands;
+namespace PrimeKit\CheckKar\Commands;
 
 use Illuminate\Console\Command;
 
-class SkeletonCommand extends Command
+class CheckKarCommand extends Command
 {
-    public $signature = 'skeleton';
+    public $signature = 'check-kar';
 
     public $description = 'My command';
 
