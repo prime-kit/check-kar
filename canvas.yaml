@@ -1,0 +1,27 @@
+preset: package
+
+namespace: PrimeKit\CheckKar
+user-auth-model: App\Models\User
+
+paths:
+  src: src
+  resource: resources
+
+factory:
+  path: database/factories
+
+migration:
+  path: database/migrations
+  prefix: ''
+
+console:
+  namespace: PrimeKit\CheckKar\Console\Command
+
+model:
+  namespace: PrimeKit\CheckKar\Models
+
+provider:
+  namespace: PrimeKit\CheckKar\Providers
+
+testing:
+  namespace: PrimeKit\CheckKar\Tests
