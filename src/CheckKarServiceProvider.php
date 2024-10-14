@@ -2,9 +2,9 @@
 
 namespace PrimeKit\CheckKar;
 
+use PrimeKit\CheckKar\Commands\CheckKarCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use PrimeKit\CheckKar\Commands\CheckKarCommand;
 
 class CheckKarServiceProvider extends PackageServiceProvider
 {
