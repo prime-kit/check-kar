@@ -2,7 +2,8 @@
 
 namespace PrimeKit\CheckKar;
 
-use PrimeKit\CheckKar\Commands\CheckKarCommand;
+use PrimeKit\CheckKar\Console\Command\Redis\RedisTestConnectionCommand;
+use PrimeKit\CheckKar\Console\Command\S3\TestStorageConnectionCommand;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
 
@@ -10,16 +11,12 @@ class CheckKarServiceProvider extends PackageServiceProvider
 {
     public function configurePackage(Package $package): void
     {
-        /*
-         * This class is a Package Service Provider
-         *
-         * More info: https://github.com/spatie/laravel-package-tools
-         */
         $package
             ->name('check-kar')
-            ->hasConfigFile()
             ->hasViews()
-            ->hasMigration('create_check_kar_table')
-            ->hasCommand(CheckKarCommand::class);
+            ->hasCommands([
+                RedisTestConnectionCommand::class,
+                TestStorageConnectionCommand::class,
+            ]);
     }
 }
